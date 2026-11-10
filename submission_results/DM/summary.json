@@ -1,0 +1,35 @@
+{
+  "project": "DM",
+  "n": 14061,
+  "development_n": 11248,
+  "heldout_test_n": 2813,
+  "seed": 42,
+  "folds": 5,
+  "chosen_cnn": "cnn_dropout_0.4",
+  "chosen_using": "development five-fold mean MAE; MdAE tie-breaker",
+  "five_fold_cnn": {
+    "model": "cnn_dropout_0.4",
+    "MAE_mean": 3.9173311263918715,
+    "MAE_std": 0.15341396750819855,
+    "MdAE_mean": 1.199158152192831,
+    "MdAE_std": 0.04245487068412687
+  },
+  "test_metrics": [
+    {
+      "model": "cnn_dropout_0.4",
+      "MAE": 3.9558950424832653,
+      "MdAE": 1.1617560386657715
+    },
+    {
+      "model": "ridge_bert_mean",
+      "MAE": 5.483456224625566,
+      "MdAE": 3.0918173789978027
+    },
+    {
+      "model": "dummy_median",
+      "MAE": 5.1336903650865855,
+      "MdAE": 1.300000011920929
+    }
+  ],
+  "note": "Baselines are separate comparisons. The test set was not used in model selection."
+}

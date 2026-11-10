@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ps1-bert-storypoints
+Version: 1.0.0
+Summary: Within-project, random-split BERT token embeddings + CNN for TAWOS story point estimation
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy<3,>=1.24
+Requires-Dist: pandas<3,>=2.0
+Requires-Dist: scikit-learn<2,>=1.3
+Requires-Dist: torch<3,>=2.1
+Requires-Dist: transformers<5,>=4.40
+Requires-Dist: matplotlib<4,>=3.7
+Requires-Dist: PyYAML<7,>=6
+Requires-Dist: PyMySQL<2,>=1.1
+Requires-Dist: tqdm<5,>=4.66
+Requires-Dist: reportlab<5,>=4
+Dynamic: license-file

@@ -1,0 +1,51 @@
+{
+  "config": {
+    "seed": 42,
+    "model_name": "google-bert/bert-base-uncased",
+    "max_length": 64,
+    "embedding_batch_size": 16,
+    "train_batch_size": 32,
+    "epochs": 12,
+    "learning_rate": 0.0007,
+    "weight_decay": 0.01,
+    "conv_channels": [
+      128,
+      64,
+      32
+    ],
+    "kernel_size": 3,
+    "cnn_dropouts": [
+      0.2,
+      0.4
+    ],
+    "cv_folds": 5,
+    "test_size": 0.2,
+    "ridge_alpha": 10.0,
+    "num_workers": 0
+  },
+  "source_csv_path": "[local path omitted from public submission]",
+  "source_csv_sha256": "4c9bec134b0b100c7999c56543c045cb466b9175e9fed8c6c4acdbc3d608e5c1",
+  "clean_csv_sha256": "0370cfc1678522d5dfd26a73d672bea8f5a6041b446dc45e267227a3436b0e4d",
+  "torch_version": "2.15.0+cu132",
+  "pandas_version": "2.3.3",
+  "audit": {
+    "project": "DM",
+    "raw_project_issues": 20065,
+    "with_positive_numeric_story_points": 20065,
+    "after_excluding_explicit_post_estimate_edits": 14365,
+    "nonempty_text": 14365,
+    "unique_issue_ids": 14365,
+    "conflicting_text_rows_dropped": 132,
+    "final_unique_issues": 14061,
+    "story_points_median": 2.0,
+    "story_points_min": 0.0001,
+    "story_points_max": 210.0,
+    "missing_edit_flags": [],
+    "unknown_flag_value_counts": {
+      "title_changed_after_estimation": 0,
+      "description_changed_after_estimation": 0,
+      "story_point_changed_after_estimation": 0
+    },
+    "warning": "Unknown/missing edit flags are not assumed safe; discuss possible post-estimation text leakage."
+  }
+}
