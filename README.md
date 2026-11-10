@@ -35,20 +35,17 @@ python -m ps1.audit_projects --csv data/raw/tawos_issues.csv
 ```bash
 python -m ps1.pipeline \
   --csv data/raw/tawos_issues.csv \
-  --project MESOS \
+  --project DM \
   --config configs/default.yaml \
   --outdir runs
 ```
 
-Replace `MESOS` with the chosen project key. The experiment uses an 80/20 development/test split, five-fold cross-validation, and reports MAE and MdAE.
 
 ## 4. View the results
 
 ```bash
-cat runs/MESOS/results/summary.json
-cat runs/MESOS/results/cv_summary.csv
-cat runs/MESOS/results/heldout_test_results.csv
-ls runs/MESOS/results/plots/
+cat runs/DM/results/summary.json
+cat runs/DM/results/cv_summary.csv
+cat runs/DM/results/heldout_test_results.csv
+ls runs/DM/results/plots/
 ```
-
-Replace `MESOS` in the results paths if another project was used.
