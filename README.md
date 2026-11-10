@@ -1,6 +1,32 @@
 # BERT-Based Word Embeddings for Within-Project Software Story Point Estimation
 
+**Project Statement 1 (PS-1) | Natural Language Processing**
+
+**Group:** Group 2  
+**Members:** Aditya Sunil Menon, Athul Anil Kumar, Johan John Koshy, Kiran Nambiar, Mohammed Omar  
+**Project data:** DM (TAWOS v1.1)
+
 Run from the repository root using Python 3.10+ and MySQL 8.
+
+
+## 1. The problem at hand
+
+How effectively do BERT-based contextual token embeddings predict story point values from the title and description of an issue, when training and testing use distinct issues from the same project under a random split? This is an example of supervised numerical regression.
+
+## 2. Methodology, Data collection and preprocessing
+
+Dataset: Tawosi et al., TAWOS v1.1 (DOI 10.5522/04/21308124). The official database is MySQL; the extractor joins Issue and Project, using Title and Description_Text as input and Story_Point as the target. Issues explicitly changed after estimation, empty texts, invalid labels, and repeated exact descriptions are filtered. Unknown change flags remain a potential limitation.
+
+| Audit stage | Count |
+| --- | --- |
+| Source issues with project key | 20065 |
+| Positive numeric labels | 20065 |
+| After explicit edit filtering | 14365 |
+| Final distinct cleaned issues | 14061 |
+| Development data (80%) | 11248 |
+| Final held-out test (20%) | 2813 |
+
+# Reproducing the experiments:
 
 ## 1. Set up the environment
 
